@@ -1,0 +1,44 @@
+  <div class="nav">
+    <div class="item_title">
+      <h1 id="item_type">Breakfast Menu
+      </h1>
+    </div>
+    <div class="nav">
+      <ul class="nav_list">
+        <li id="nav_item"><a href="#">Add Items</a></li>
+        <li id="nav_item"><a href="#">Add Menus</a></li>
+      </ul>
+    </div>
+  </div>  
+
+<h1 id="itemDesc">Your Items <%=@item.name%></h1>
+
+<p id="whatMenus">
+  <%@items_menus.each do |m|%>
+          <%="#{@item.name} belongs to: #{Menu.find_by_id(m.menu_id).name}"%> <br />
+  <%end%>
+</p>
+
+
+<!--   <div class="nav">
+    <div class="title">
+      <h1 id="menu_type">Breakfast Menu
+      </h1>
+    </div>
+    <div class="nav">
+      <ul class="nav_list">
+        <li id="nav_item"><a href="#">Add Items</a></li>
+        <li id="nav_item"><a href="#">Add Menus</a></li>
+      </ul>
+    </div>
+  </div>  
+
+  <div class="item_title">
+    <div id="your_items"><a href="#">Your Items:</a></div>
+      <div class="items_list">
+        <% #Item.all.each do |i| %>
+          <a id="item" href="/item/<%=i.id%>"><%=i.name%></a><br/>
+        <%#end%>
+      </div>
+    </div>
+  </div> -->

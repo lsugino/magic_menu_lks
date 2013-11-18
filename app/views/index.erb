@@ -1,0 +1,43 @@
+
+  <div class="nav">
+    <div class="title">
+      <h1 id="welcome">Welcome to Awesome Menus
+      </h1>
+    </div>
+    <div class="nav">
+      <ul class="nav_list">
+        <li id="nav_item"><a href="/items">Add Items</a></li>
+        <li id="nav_item"><a href="#">Add Menus</a></li>
+      </ul>
+    </div>
+  </div>  
+
+
+<div class="note">
+  <div class="postit">
+    <ul>
+      <li id="directions">Enter a menu name and click "Add Menu"</li>
+      <li>Menu name should be appended to the bottom of the list</li>
+    </ul>
+  </div>
+</div>
+
+<div class="menu_stuff">
+  <div class="search_bar">
+    <form action="/" method="post" class="menu_name">
+      <input type="text" id="menu_input" name="menu_name" placeholder="Enter menu name here...">
+      <input type="submit" value="Add Menu" id="menu_btn">
+    </form>
+  </div>
+
+  <div class="menu_title">
+    <div id="your_menus"><a href="#">Your Menus:</a></div>
+      <div class="menuitems">
+        <% Menu.all.reverse.each do |m| %>
+          <a id="m_items" href="/menu/<%=m.id%>"><%=m.name%></a><br/>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>
+
